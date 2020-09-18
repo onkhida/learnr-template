@@ -1,0 +1,277 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav { 
+    z-index: 1;
+    width: 100%; 
+    min-height: 30px; 
+    padding: 17px; 
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #231B80;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    align-self: center;
+    font-size: 25px;
+    color: white;;
+}
+
+.nav-links ul {
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #bab4ff;
+}
+
+.btn-light {
+    background-color: #1501FF;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-light:hover {
+    background-color: #3120eb;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark {
+    background-color: #09034A;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark:hover {
+    background-color: #090068;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-darkest {
+    background-color: #0A0546;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.btn-darkest:hover {
+    background-color: #080152;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.toggle-btn {
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer
+}
+
+.toggle-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 900px) {
+/* Mobile Devices */
+    nav {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        padding: 7px;
+    }
+
+    .nav-links ul li {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .nav-links ul.active {
+        display: flex;
+    }
+
+}
+
+/* Just straighten things out at awkward media points*/
+@media only screen and (max-width: 1000px) {
+
+    .nav-links ul {
+        min-width: 40vw;
+    }
+
+    .discover .column-1 p{
+        width: 300px !important;
+        padding-bottom: 10px;
+    }
+}
+
+
+/* Discover Page */
+
+.discover {
+    /* border: 3px solid red; */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 40px;
+}
+
+.discover .column-1 h1{
+    font-size: 33px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.discover .column-1 p{
+    width: 35vw;
+    padding-bottom: 10px;
+}
+
+.discover .column-2 img{
+    height: 80vh;
+}
+
+/* Courses List Page */
+.courses-list {
+    min-height: 100vh;
+    /* border: 3px solid orange; */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #F9F9F9;
+}
+
+.courses-list .row {
+    /* border: 3px solid rgb(78, 64, 37); */
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.courses-list .row .card {
+    background: #F2F2F2;
+    border: 3px solid rgb(231, 231, 231);
+    box-sizing: border-box;
+    width: 301px;
+    text-align: center;
+    transition: 0.5s ease;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.courses-list .row .card:hover {
+    background: #F2F2F2;
+    border: 3px solid #4c94d6;
+    box-sizing: border-box;
+    width: 301px;
+    text-align: center; 
+}
+
+.courses-list .row .card:hover h5 {
+    color: #023e75;
+}
+
+
+.courses-list .row .card img {
+    width: 100% !important;  
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;  
+}
+
+.courses-list .row .card h5 {
+   font-size: 18px;
+   font-weight: bold;
+   padding: 10px 0 10px 7px;
+   color: rgb(37, 33, 33);
+}
+
+.courses-list .row .card p {
+    font-size: 12px;
+    color: gray;
+    padding: 5px;
+ }
+
+.courses-list .row .card .author {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.courses-list .row .card .author img {
+    height: 30px;
+    width: 30px !important;
+    border-radius: 50%;
+    margin: 0 10px 0 10px;
+}
+
+.courses-list .row .card .author span {
+    font-weight: 500;
+}
+
+.courses-list .row .card .content {
+    padding-bottom: 35px;
+}
+
+
+
+

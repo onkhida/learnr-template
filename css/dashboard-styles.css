@@ -1,0 +1,249 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav { 
+    z-index: 1;
+    width: 100%; 
+    min-height: 30px; 
+    padding: 17px; 
+    position: relative; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #231B80;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    align-self: center;
+    font-size: 25px;
+    color: white;;
+}
+
+.nav-links ul {
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #bab4ff;
+}
+
+.btn-light {
+    background-color: #1501FF;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-light:hover {
+    background-color: #3120eb;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark {
+    background-color: #09034A;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark:hover {
+    background-color: #090068;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-darkest {
+    background-color: #0A0546;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+    font-weight: bolder;
+}
+
+.btn-darkest:hover {
+    background-color: #080152;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.toggle-btn {
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer
+}
+
+.toggle-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 900px) {
+/* Mobile Devices */
+    nav {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        padding: 7px;
+    }
+
+    .nav-links ul li {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .nav-links ul.active {
+        display: flex;
+    }
+
+}
+
+/* Just straighten things out at awkward media points*/
+@media only screen and (max-width: 1000px) {
+
+    body {
+        overflow-x: hidden;
+    }
+    .nav-links ul {
+        min-width: 40vw;
+    }
+
+    .home-page div {
+        width: 80vw !important;
+        margin: 10px;
+    }
+
+    .home-page {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    
+    .home-page div img {
+        width: 100% !important;
+        height: 60vh;
+        padding: 10px;
+    }
+}
+
+/* Home Page Syles */
+.home-page {
+    min-height: 100vh;
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* .home-page .row {
+    display: flex;
+    justify-content: space-evenly;
+} */
+
+.home-page div {
+    /* border: 3px solid yellowgreen; */
+    width: 40vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home-page .column-1 img {
+    width: 40vw;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+
+.home-page .column-1 img:hover {
+    border: 3px solid #3f2eff;
+}
+
+
+
+.home-page .column-2 img {
+    width: 40vw;
+    /* border: 3px solid red; */
+    height: 60vh;
+}
+
+.home-page .column-1 progress {
+    width: 87%;
+    height: 30px;
+
+}
+
+.home-page .column-1 span {
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.progress-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.home-page .column-2 p {
+    font-family: 'Playfair Display', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 5px 0 20px 0;
+
+}
+
+

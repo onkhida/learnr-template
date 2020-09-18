@@ -1,0 +1,332 @@
+/*CSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav { 
+    z-index: 1;
+    width: 100%; 
+    min-height: 30px; 
+    padding: 17px; 
+    position: absolute; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo h3 {
+    font-family: 'Montserrat', sans-serif !important;
+    display: flex;
+    align-self: center;
+    font-size: 25px;
+    color: white;;
+}
+
+.nav-links ul {
+    display: flex;
+    width: 35vw;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.5s ease;
+}
+
+.nav-links ul li a:hover {
+    color: #bab4ff;
+}
+
+.btn-light {
+    background-color: #1501FF;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-light:hover {
+    background-color: #3120eb;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark {
+    background-color: #09034A;
+    color: white;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.btn-dark:hover {
+    background-color: #090068;
+    color: white!important;
+    padding: 10px 30px 10px 30px;
+    border-radius: 5px;
+}
+
+.toggle-btn {
+    height: 40px;
+    width: 40px;
+    display: none;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    cursor: pointer
+}
+
+.toggle-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media only screen and (max-width: 900px) {
+/* Mobile Devices */
+    nav {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+    .nav-links ul {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        padding: 7px;
+    }
+
+    .nav-links ul li {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 0.5rem;
+    }
+
+    .toggle-btn {
+        display: block;
+    }
+
+    .nav-links ul.active {
+        display: flex;
+    }
+
+    nav.active {
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+/* Just straighten things out at awkward media points*/
+@media only screen and (max-width: 1000px) {
+
+    .nav-links ul {
+        min-width: 40vw;
+    }
+}
+
+/* Page 1 start */
+
+.first-page {
+    background: linear-gradient(89.8deg, #0A0546 0.75%, rgba(17, 5, 153, 0.460499) 54.23%, rgba(12, 3, 117, 0.264844) 73.62%, rgba(50, 39, 183, 0) 99.88%), url('../img/bg.jpg');
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.first-page .container {
+    height: 100vh;
+    /* border: 3px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.first-page .container .row {
+    /* border: 3px solid orange; */
+    width: 80%;
+
+}
+
+.first-page .container .row h1 {
+    color: white;
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.first-page .container .row p {
+    color: white;
+    /* font-size: 30px; */
+    padding-bottom: 3px;
+}
+
+.first-page .container .row a {
+    color: white;
+    transition: 3s ease;
+    text-decoration: none;
+    font-size: 17px !important;
+}
+
+/* Page 2 start */
+.second-page {
+    min-height: 100vh;
+}
+
+.second-page .container {
+    height: 100%;
+    width: 100%;
+    padding: 5vh 0 5vh 0;
+}
+
+.second-page .container .row {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.second-page .container .row .card {
+    width: 300px;
+    text-align: center;
+    padding: 5px;
+    border: 0px;
+}
+
+.second-page .container .row .card h4 {
+    font-size: 23px;
+    padding: 5px 0 15px 0;
+}
+
+.second-page .container .row h3{
+    font-size: 30px;
+    padding: 10px 0 20px 0;
+}
+
+.second-page .container .row h3 span{
+    background: rgba(7, 37, 145, 0.055);
+}
+
+/* Page 3 start */
+.third-page {
+    min-height: 100vh;
+    background-color: #F9F9F9;
+    display: flex;
+    align-items: center;
+}
+
+.third-page .container .row .text-column {
+    width: 400px;
+    margin: auto;
+}
+
+.third-page .container .row .text-column p {
+    padding: 3px 0 15px 0;
+}
+
+.third-page .container .row .text-column small {
+    padding: 10px 0 15px 0;
+    display: block;
+    font-size: 9px;
+    color: rgb(73, 73, 73);
+}
+
+
+.third-page .container .row .column img {
+    height: 80vh;
+}
+
+.third-page .container .row  {
+    display: flex;
+    justify-content: space-around;
+    padding: 7vh;
+}
+
+.third-page .container .row .column h1 {
+    font-size: 41px;
+    min-width: 392px;
+    padding-bottom: 5px;
+}
+
+.third-page .container .row .column p {
+    font-size: 21px;
+    min-width: 316px;
+}
+
+/* Quote section start */
+
+.quote-section {
+    min-height: 60vh;
+    background-color: #DBDAE2;
+    display: flex;
+    align-items: center;
+    padding-bottom: 7vh;
+}
+
+.quote-section .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.quote-section .container p {
+    text-align: center;
+}
+
+.quote-section .container p{
+    font-family: 'Playfair Display', serif;
+}
+
+.quote-section .container .qsymbol{
+    font-size: 125px;
+}
+
+.quote-section .container .qtext{
+    font-size: 50px;
+}
+
+.quote-section .container .qauthor {
+    padding-top: 5vh;
+    font-size: 35px;
+}
+
+/* Footer here */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    height: 15vh;
+}
+
+footer .container{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer span {
+    font-size: 20px;
+}
+
+
+
+
